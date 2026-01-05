@@ -28,13 +28,12 @@ class Student:
             print(f"  {subject}: {marks}")
         print("Average  :", self.calculate_average())
 
-
-# ---------------- PROGRAM STARTS HERE -----------------
+ 
 if __name__ == "__main__":
-    all_students = []  # List to store multiple student objects
+    all_students = []  
 
     while True:
-        # Input details for one student
+ 
         name = input("Enter student name: ")
         age = int(input("Enter age: "))
         email = input("Enter email: ")
@@ -43,17 +42,16 @@ if __name__ == "__main__":
 
         student = Student(name, age, email, address, roll_no)
 
-        # Input subjects for this student
+    
         num_subjects = int(input("How many subjects? "))
         for i in range(1, num_subjects + 1):
             subject_name = input(f"Enter name of subject {i}: ")
             marks = float(input(f"Enter marks for {subject_name}: "))
             student.add_subject(subject_name, marks)
 
-        # Add student to list
+ 
         all_students.append(student)
-
-        # Ask if user wants to add another student
+ 
         another = input("Do you want to add another student? (y/n): ").lower()
         if another != 'y':
             break
